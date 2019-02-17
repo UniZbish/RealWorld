@@ -1,6 +1,10 @@
 {
   "dependencies": {
+HEAD
     "com.unity.ads": "2.0.8",
+
+    "com.unity.ads": "2.3.1",
+1ad2f56090ec2ccc63b350c969d566f007e33621
     "com.unity.analytics": "3.2.2",
     "com.unity.collab-proxy": "1.2.15",
     "com.unity.package-manager-ui": "2.0.3",
