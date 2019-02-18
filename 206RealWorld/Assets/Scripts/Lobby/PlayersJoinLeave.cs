@@ -7,6 +7,7 @@ public class PlayersJoinLeave : MonoBehaviour
 {
     public Image Lobby1, Lobby2, Lobby3, Lobby4;
     public Text readyText;
+    public AudioSource LobbyMusic, readySound;
     public Button readyButton;
     public bool P1Act, P2Act, P3Act, P4Act, ready;
     public Sprite Cross, Tick;
@@ -90,12 +91,16 @@ public class PlayersJoinLeave : MonoBehaviour
             readyText.text = "READY!!!!";
             readyButton.interactable = true;
             readyButton.GetComponentInChildren<Text>().text = "Click to continue";
+            LobbyMusic.volume = 0.4f;
+            readySound.Play();
         }
         else
         {
             readyText.text = "LOBBY";
             readyButton.interactable = false;
             readyButton.GetComponentInChildren<Text>().text = "";
+            LobbyMusic.volume = 1f;
+            readySound.Stop();
         }
     }
 }
