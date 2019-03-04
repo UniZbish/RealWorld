@@ -11,7 +11,7 @@ public class ScoreSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player1Score = player2Score = player3Score = player4Score = 0;
+        //player1Score = player2Score = player3Score = player4Score = 0
     }
 
     // Update is called once per frame
