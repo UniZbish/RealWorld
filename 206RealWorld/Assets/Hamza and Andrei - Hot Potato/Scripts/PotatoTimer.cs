@@ -10,7 +10,7 @@ public class PotatoTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      explosionCountdown = 15.50f;
+      explosionCountdown = 5.50f;
     }
 
     // Update is called once per frame
