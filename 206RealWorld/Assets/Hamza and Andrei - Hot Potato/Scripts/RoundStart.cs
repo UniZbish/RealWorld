@@ -42,7 +42,7 @@ public class RoundStart : MonoBehaviour
 
     void restartRound()
     {
-      roundRestart.explosionCountdown = 15.5f;
+      roundRestart.explosionCountdown = 5.5f;
       hotStarter = playerList[Random.Range(0, playerList.Count)];
 
       if(startNewRound1 != null){
