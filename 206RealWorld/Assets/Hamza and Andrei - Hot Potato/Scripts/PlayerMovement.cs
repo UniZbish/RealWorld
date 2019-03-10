@@ -34,8 +34,14 @@ public class PlayerMovement : MonoBehaviour
     {
         Move();
 
-        if (hot == true){
+        if (hot == true)
+        {
+            playerspriteproperties.color = Color.red;
             BecomeHot();
+        }
+        else
+        {
+            playerspriteproperties.color = Color.white;
         }
 
     }
@@ -50,14 +56,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void BecomeHot()
     {
-        playerspriteproperties.color = Color.red;
         if (playerDeath.explosionCountdown < 1)
         {
             Debug.Log("Player " + startingHot.hotStarter.ToString() + " has been eliminated!");
             Destroy(GameObject.Find("Player " + startingHot.hotStarter.ToString()));
             startingHot.playerList.Remove(startingHot.hotStarter);
-
-            
         }
     }
 
@@ -65,71 +68,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (playerNum == 1 && startingHot.hotStarter == 1)
         {
-            player1.hot = true;
-            player2.hot = false;
-            player3.hot = false;
-            player4.hot = false;
             Debug.Log("Player 1 starts with the Hot Potato.");
         }
         if (playerNum == 2 && startingHot.hotStarter == 2)
         {
-            player1.hot = false;
-            player2.hot = true;
-            player3.hot = false;
-            player4.hot = false;
             Debug.Log("Player 2 starts with the Hot Potato.");
         }
         if (playerNum == 3 && startingHot.hotStarter == 3)
         {
-            player1.hot = false;
-            player2.hot = false;
-            player3.hot = true;
-            player4.hot = false;
             Debug.Log("Player 3 starts with the Hot Potato.");
         }
         if (playerNum == 4 && startingHot.hotStarter == 4)
         {
-            player1.hot = false;
-            player2.hot = false;
-            player3.hot = false;
-            player4.hot = true;
             Debug.Log("Player 4 starts with the Hot Potato.");
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Player1" && !player1.hot)
-        {
-            startingHot.hotStarter = 1;
-            player1.hot = true;
-            player2.hot = false;
-            player3.hot = false;
-            player4.hot = false;
-        }
-        if (collision.gameObject.tag == "Player2" && !player2.hot)
-        {
-            startingHot.hotStarter = 2;
-            player1.hot = false;
-            player2.hot = true;
-            player3.hot = false;
-            player4.hot = false;
-        }
-        if (collision.gameObject.tag == "Player3" && !player3.hot)
-        {
-            startingHot.hotStarter = 3;
-            player1.hot = false;
-            player2.hot = false;
-            player3.hot = true;
-            player4.hot = false;
-        }
-        if (collision.gameObject.tag == "Player4" && !player4.hot)
-        {
-            startingHot.hotStarter = 4;
-            player1.hot = false;
-            player2.hot = false;
-            player3.hot = false;
-            player4.hot = true;
-        }
-    }
 }
