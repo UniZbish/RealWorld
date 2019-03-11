@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/main.unity
+    guid: f111b5d288551e04b9b73cecc453c9eb
+  - enabled: 1
+    path: Assets/Lobby.unity
+    guid: 45d418b506d585c47990c367d7e15665
+  - enabled: 1
+    path: Assets/Hamza and Andrei - Hot Potato/Scene/Hot Potato.unity
+    guid: 14b9923a8aa099244a0d52a386678dc3
   m_configObjects: {}
