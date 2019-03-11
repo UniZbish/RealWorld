@@ -76,13 +76,16 @@ public class PlayerMovement : MonoBehaviour
             }
             if (startingHot.playerList.Count == 2)
             {
+                startingHot.timer = 2;
                 if (startingHot.hotStarter == 1) score.player1Score += 3;
                 if (startingHot.hotStarter == 2) score.player2Score += 3;
                 if (startingHot.hotStarter == 3) score.player3Score += 3;
                 if (startingHot.hotStarter == 4) score.player4Score += 3;
+                
             }
             if (startingHot.playerList.Count == 1)
             {
+                Application.LoadLevel(Application.loadedLevel);
                 if (startingHot.hotStarter == 1) score.player1Score += 5;
                 if (startingHot.hotStarter == 2) score.player2Score += 5;
                 if (startingHot.hotStarter == 3) score.player3Score += 5;

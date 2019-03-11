@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestoryTime : MonoBehaviour
 {
 
-    public float destroyTime;
+    public float destroyTime = 1.5f;
 
     void Start()
     {

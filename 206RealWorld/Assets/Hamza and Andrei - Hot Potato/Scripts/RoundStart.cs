@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class RoundStart : MonoBehaviour
 {
-  public int hotStarter;
-  public List<int> playerList = new List<int>();
-  PotatoTimer roundRestart;
-  PlayerMovement startNewRound1;
-  PlayerMovement startNewRound2;
-  PlayerMovement startNewRound3;
-  PlayerMovement startNewRound4;
+    public int hotStarter;
+    public List<int> playerList = new List<int>();
+    public float timer;
+    PotatoTimer roundRestart;
+    PlayerMovement startNewRound1;
+    PlayerMovement startNewRound2;
+    PlayerMovement startNewRound3;
+    PlayerMovement startNewRound4;
     // Start is called before the first frame update
     void Start()
     {
-
+        timer = 5.5f;
       playerList.Add(1);
       playerList.Add(2);
       playerList.Add(3);
@@ -42,7 +43,7 @@ public class RoundStart : MonoBehaviour
 
     void restartRound()
     {
-      roundRestart.explosionCountdown = 5.5f;
+      roundRestart.explosionCountdown = timer;
       hotStarter = playerList[Random.Range(0, playerList.Count)];
 
       if(startNewRound1 != null){
