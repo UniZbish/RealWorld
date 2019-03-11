@@ -5,18 +5,19 @@ using UnityEngine.UI;
 
 public class PlayersJoinLeave : MonoBehaviour
 {
+    public GameObject lobbyItems;
     public Image Lobby1, Lobby2, Lobby3, Lobby4;
     public Text readyText;
     public AudioSource LobbyMusic, readySound;
     public Button readyButton;
-    public bool P1Act, P2Act, P3Act, P4Act, ready;
+    public bool P1Act, P2Act, P3Act, P4Act, ready, moveOn, playedReady;
     public Sprite Cross, Tick;
     public int Lobby = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        playedReady = false;
     }
 
     // Update is called once per frame
@@ -91,16 +92,26 @@ public class PlayersJoinLeave : MonoBehaviour
             readyText.text = "READY!!!!";
             readyButton.interactable = true;
             readyButton.GetComponentInChildren<Text>().text = "Click to continue";
-            LobbyMusic.volume = 0.4f;
-            readySound.Play();
+            LobbyMusic.volume = 0.05f;
+            if (playedReady == false)
+            {
+                readySound.Play();
+                playedReady = true;
+            }
         }
         else
         {
             readyText.text = "LOBBY";
             readyButton.interactable = false;
             readyButton.GetComponentInChildren<Text>().text = "";
-            LobbyMusic.volume = 1f;
+            LobbyMusic.volume = 0.4f;
+            playedReady = false;
             readySound.Stop();
         }
+    }
+
+    public void ReadyClicked()
+    {
+        lobbyItems.transform.position = new Vector3(0, 2000, 0);
     }
 }
