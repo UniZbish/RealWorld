@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestoryTime : MonoBehaviour
+public class DestoryTime1 : MonoBehaviour
 {
 
     public float destroyTime = 3.5f;
