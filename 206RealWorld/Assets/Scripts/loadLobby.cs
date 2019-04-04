@@ -17,7 +17,7 @@ public class loadLobby : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Main");
         }
     }
 }

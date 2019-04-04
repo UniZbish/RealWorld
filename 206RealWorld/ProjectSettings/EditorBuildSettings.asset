@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/main.unity
-    guid: f111b5d288551e04b9b73cecc453c9eb
   - enabled: 1
     path: Assets/Lobby.unity
     guid: 45d418b506d585c47990c367d7e15665
   - enabled: 1
+    path: Assets/Menu/Scenes/Main.unity
+    guid: ba2c5cc8e45395c47b3eeb7abcce8064
+  - enabled: 1
     path: Assets/Hamza and Andrei - Hot Potato/Scene/Hot Potato.unity
     guid: 14b9923a8aa099244a0d52a386678dc3
+  - enabled: 1
+    path: Assets/206RW,Yu Lin/Assets/minigame.unity
+    guid: 11e7d5f2e681c9443ae5376798cedad2
+  - enabled: 1
+    path: Assets/ColourGuess/Scenes/ColourGuess.unity
+    guid: 9a6454b7cebf1f84a99a3ae0a07d88c4
   m_configObjects: {}

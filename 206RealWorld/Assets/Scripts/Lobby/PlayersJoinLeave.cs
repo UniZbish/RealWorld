@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayersJoinLeave : MonoBehaviour
 {
@@ -112,6 +113,6 @@ public class PlayersJoinLeave : MonoBehaviour
 
     public void ReadyClicked()
     {
-        lobbyItems.transform.position = new Vector3(0, 2000, 0);
+        SceneManager.LoadScene("Main");
     }
 }
